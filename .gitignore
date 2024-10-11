@@ -1,0 +1,7 @@
+__pycache__/
+
+model-service/data
+model-service/test
+model-service/trained_weight
+model-service/FCBFormer/pvt_v2_b3.pth
+model-service/FCBFormer/Predictions
