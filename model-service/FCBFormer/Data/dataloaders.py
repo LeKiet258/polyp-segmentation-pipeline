@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from torchvision import transforms
 from torch.utils import data
 
-from Data.dataset import SegDataset
+from .dataset import SegDataset
 
 
 def split_ids(len_ids, is_train):
