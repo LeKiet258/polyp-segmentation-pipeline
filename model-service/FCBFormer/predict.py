@@ -9,9 +9,9 @@ import cv2
 import torch
 import torch.nn as nn
 
-from Data import dataloaders
-from Models import models
-from Metrics import performance_metrics
+from .Data import dataloaders
+from .Models import models
+from .Metrics import performance_metrics
 import shutil
 
 def build(args):
@@ -24,7 +24,7 @@ def build(args):
     '''
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     # configure path to test dataset
-    # data_root = '/content/drive/MyDrive/Thesis/data/'
+    
     img_path =  args.test_set + "/images/*"
     input_paths = sorted(glob.glob(img_path))
     depth_path = args.test_set + "/masks/*"
