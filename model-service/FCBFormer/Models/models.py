@@ -122,7 +122,7 @@ class TB(nn.Module):
             sr_ratios=[8, 4, 2, 1],
         )
 
-        checkpoint = torch.load("/home/kietl/final-m1/model-service/FCBFormer/pvt_v2_b3.pth")
+        checkpoint = torch.load("./FCBFormer/pvt_v2_b3.pth")
         backbone.default_cfg = _cfg()
         backbone.load_state_dict(checkpoint)
         self.backbone = torch.nn.Sequential(*list(backbone.children()))[:-1]

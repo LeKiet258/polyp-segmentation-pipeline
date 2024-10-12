@@ -24,7 +24,7 @@ transform_input4test = transforms.Compose(
     ]
 )
 model = models.FCBFormer()
-state_dict = torch.load('/home/kietl/final-m1/model-service/trained_weight/FCBFormer_Kvasir.pt', map_location=torch.device('cpu'))
+state_dict = torch.load('./trained_weight/FCBFormer_Kvasir.pt', map_location=torch.device('cpu'))
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 model.load_state_dict(state_dict["model_state_dict"])
 
