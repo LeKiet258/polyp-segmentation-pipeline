@@ -1,4 +1,5 @@
 __pycache__/
+*.bk
 
 model-service/data
 model-service/test
